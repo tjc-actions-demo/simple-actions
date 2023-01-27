@@ -1,0 +1,12 @@
+name: First Github Action
+on:
+  workflow_dispatch:
+
+jobs:
+  first-job:
+    name: First Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display the path
+        run: echo ${env:PATH}
+        shell: pwsh
