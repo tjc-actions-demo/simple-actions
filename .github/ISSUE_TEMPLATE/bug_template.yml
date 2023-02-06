@@ -44,7 +44,7 @@ body:
           required: true
 
   - type: textarea
-     id: other
+     id: other-info
      attributes:
        label: Other
        description: Add any other context or screenshots about the feature request below.
