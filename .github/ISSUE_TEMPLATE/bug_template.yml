@@ -27,7 +27,7 @@ body:
       required: true
 
   - type: textarea
-   id: alternatives
-   attributes:
-     label: Describe alternatives you've considered
-     description: List any alternatives you might have tried to fix the bug you want.
+    id: alternatives
+    attributes:
+      label: Describe alternatives you've considered
+      description: List any alternatives you might have tried to fix the bug you want.
