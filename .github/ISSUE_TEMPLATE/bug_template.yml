@@ -1,45 +1,62 @@
-name: Bug report
-description: Send a bug WinUEFI has that needs to be fixed
-title: "[BUG] <title>"
-labels: ["bug"]
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - octocat
 body:
-- type: markdown
-  attributes:
-    value: |
-      Thank you for filling out a bug that WinUEFI has! It helps me make the application better. Please be as detailed as possible so that i may consider and review the bug easier.
-      I ask that you search all the issues to avoid a duplicate bug. If one exists, please reply if you have anything to add to it.
-      Before requesting a bug, please make sure you are using the latest version and that the bug you are requesting is not already fixed in WinUEFI.                       
-- type: textarea
-  id: bug-and-suggestion-relation
-  attributes:
-    label: Is your bug related to a suggestion?
-    description: Please give some context for this request. Why do you want it to be fixed?
-  validations:
-    required: true
-- type: textarea
-  id: bug-description
-  attributes:
-    label: Describe the bug
-    description: A clear and concise description of what the bug is and what needs to be fixed.
-  validations:
-    required: true
- - type: textarea
-   id: alternatives
-   attributes:
-     label: Describe alternatives you've considered
-     description: List any alternatives you might have tried to fix the bug you want.
- - type: checkboxes
-   id: agreements
-   attributes:
-     label: Agreements
-     description: Please agree to the following:
-   options:
-     - label: I have searched for and ensured there isn't already an open issue regarding this.
-       required: true
-     - label: I have ensured the bug I'm reporting isn't already fixed in the latest supported WinUEFI build.
-       required: true
- - type: textarea
-   id: other
-   attributes:
-     label: Other
-     description: Add any other context or screenshots about the feature request below.
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
