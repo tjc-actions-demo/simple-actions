@@ -17,3 +17,11 @@ body:
       description: Please give some context for this request. Why do you want it to be fixed?
     validations:
       required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is and what needs to be fixed.
+    validations:
+      required: true
