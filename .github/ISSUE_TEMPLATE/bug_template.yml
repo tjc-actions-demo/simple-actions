@@ -1,6 +1,6 @@
 name: Bug report
 description: Send a bug WinUEFI has that needs to be fixed
-title: "[BUG] <title>"
+title: "[BUG] "
 labels: ["bug"]
 body:
   - type: markdown
