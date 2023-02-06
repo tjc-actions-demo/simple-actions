@@ -6,7 +6,7 @@ body:
 - type: markdown
   attributes:
     value: |
-      Thank you for filling out a bug that WinUEFI has! It helps me make the application better. Please be as detailed as possible so that i may consider and review the bug easier.
+      Test
 - type: textarea
   id: bug-and-suggestion-relation
   attributes:
