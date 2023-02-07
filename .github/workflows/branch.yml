@@ -1,0 +1,17 @@
+name: First Github Action
+on:
+  workflow_dispatch:
+
+jobs:
+  first-job:
+    name: First Job
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Restart App Server release
+        if: ${{ contains(github.ref_name, 'release') || github.ref == 'refs/heads/release' }}
+        run: echo "Release Branch"
+      
+      - name: Restart App Server development
+        if: ${{ !contains(github.ref_name, 'release') || github.ref != 'refs/heads/release' }}
+        run: echo "Not Release Branch"
