@@ -16,7 +16,7 @@ jobs:
           echo ${{ github.ref }}
       
       - name: Restart App Server development
-        if: ${{ contains(github.ref_name, 'release') == false || github.ref != 'refs/heads/release' }}
+        if: ${{ contains(github.ref_name, 'release') == false && github.ref != 'refs/heads/release' }}
         run: |
           echo "Not Release Branch"
           echo "${{ github.ref_name }} - ${{ contains(github.ref_name, 'release') }}"
