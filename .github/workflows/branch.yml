@@ -1,4 +1,4 @@
-name: First Github Action
+name: Restart Services
 on:
   workflow_dispatch:
 
